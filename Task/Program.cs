@@ -29,6 +29,21 @@ int LengthSearchArray(string[] array, int number)
     return j;
 }
 
+string[] GetNewArray(string[] array, int number, int length)
+{
+    string[] result = new string[length];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= number)
+        {
+            result[j] = array[i];
+            j++;
+        }
+    }
+    return result;
+}
+
 Console.WriteLine($"Введи количество элементов планируемых ко вводу: ");
 int i = Convert.ToInt32(Console.ReadLine());
 
@@ -45,3 +60,5 @@ Console.WriteLine($"Предоставлен массив: ");
 PrintArray(text);
 
 int length = LengthSearchArray(text, number);
+
+string[] array = GetNewArray(text, number, length);
