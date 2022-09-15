@@ -15,6 +15,20 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
+int LengthSearchArray(string[] array, int number)
+{
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        int length = array[i].Length;
+        if (length <= number)
+        {
+            j++;
+        }
+    }
+    return j;
+}
+
 Console.WriteLine($"Введи количество элементов планируемых ко вводу: ");
 int i = Convert.ToInt32(Console.ReadLine());
 
@@ -29,3 +43,5 @@ for (int j = 0; j < i; j++)
 Console.WriteLine($"Предоставлен массив: ");
 
 PrintArray(text);
+
+int length = LengthSearchArray(text, number);
