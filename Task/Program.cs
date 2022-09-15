@@ -62,3 +62,13 @@ PrintArray(text);
 int length = LengthSearchArray(text, number);
 
 string[] array = GetNewArray(text, number, length);
+if (array.Length <= 0)
+{
+    Console.WriteLine($"Элементы массива короче или равны длины {number}: ");
+    Console.WriteLine($"[]");
+}
+else
+{
+    Console.WriteLine($"Элементы массива короче или равны длины {number}: ");
+    PrintArray(array);
+}
