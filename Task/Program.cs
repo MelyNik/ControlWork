@@ -6,6 +6,15 @@
 пользоваться коллекциями, лучше обойтись исключительно массивами.
 */
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
 Console.WriteLine($"Введи количество элементов планируемых ко вводу: ");
 int i = Convert.ToInt32(Console.ReadLine());
 
@@ -19,4 +28,4 @@ for (int j = 0; j < i; j++)
 }
 Console.WriteLine($"Предоставлен массив: ");
 
-
+PrintArray(text);
